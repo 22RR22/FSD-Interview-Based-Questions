@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FSD Interview Questions - Dark Glassmorphism</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right top, #0f2027, #203a43, #2c5364);
+            background-attachment: fixed;
+            font-family: 'Poppins', sans-serif;
+            color: #f0f0f0;
+        }
+
+        .main-container {
+            padding: 2rem;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .accordion-item {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem !important;
+            margin-bottom: 1rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .accordion-header button {
+            background: transparent !important;
+            color: #fff !important;
+            font-weight: 500;
+            border: none !important;
+            box-shadow: none !important;
+            border-radius: 1rem !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        .accordion-button::after {
+            filter: brightness(0) invert(1);
+        }
+
+        .accordion-body {
+            color: #e0e0e0;
+            background: rgba(0, 0, 0, 0.2);
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+
+        .accordion-collapse {
+            border: none;
+        }
+
+        h2.category-title {
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: 500;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .accordion-body pre {
+            background-color: rgba(0,0,0,0.4);
+            color: #f5f5f5;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <h1>Full-Stack Developer Interview Questions</h1>
+
+        <!-- HTML & HTML5 Section -->
+        <h2 class="category-title">HTML & HTML5</h2>
+        <div class="accordion" id="htmlAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html-q1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#html-a1">What is HTML5, and how is it different from HTML4?</button>
+                </h2>
+                <div id="html-a1" class="accordion-collapse collapse" data-bs-parent="#htmlAccordion">
+                    <div class="accordion-body">HTML5 is the latest version of HyperText Markup Language. It introduced new features like semantic elements (e.g., <code>&lt;article&gt;</code>, <code>&lt;header&gt;</code>), multimedia support (<code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>), and improved form controls, which were not present in HTML4.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html-q2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#html-a2">What are the new features introduced in HTML5?</button>
+                </h2>
+                <div id="html-a2" class="accordion-collapse collapse" data-bs-parent="#htmlAccordion">
+                    <div class="accordion-body">New features include: semantic elements, <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code> tags, <code>&lt;canvas&gt;</code> and SVG for graphics, Geolocation APIs, local storage, and new form input types (e.g., email, date).</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html-q3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#html-a3">What is the difference between HTML tags and HTML elements?</button>
+                </h2>
+                <div id="html-a3" class="accordion-collapse collapse" data-bs-parent="#htmlAccordion">
+                    <div class="accordion-body">An HTML tag is the starting or ending part of an element, like <code>&lt;p&gt;</code> or <code>&lt;/p&gt;</code>. An HTML element consists of the start tag, the content, and the end tag, for example: <code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code>.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html-q4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#html-a4">List the new semantic elements introduced in HTML5. Explain their purpose.</button>
+                </h2>
+                <div id="html-a4" class="accordion-collapse collapse" data-bs-parent="#htmlAccordion">
+                    <div class="accordion-body"><code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, and <code>&lt;main&gt;</code>. They provide meaning to the content, improving SEO and accessibility.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html-q5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#html-a5">How does using semantic HTML5 improve SEO and accessibility?</button>
+                </h2>
+                <div id="html-a5" class="accordion-collapse collapse" data-bs-parent="#htmlAccordion">
+                    <div class="accordion-body">Semantic tags help search engines understand the structure and importance of content, improving SEO. For accessibility, they allow screen readers to better interpret and navigate the page for visually impaired users.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html-q6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#html-a6">What are the different types of lists in HTML5? Explain with examples.</button>
+                </h2>
+                <div id="html-a6" class="accordion-collapse collapse" data-bs-parent="#htmlAccordion">
+                    <div class="accordion-body">Ordered lists (<code>&lt;ol&gt;</code>), unordered lists (<code>&lt;ul&gt;</code>), and description lists (<code>&lt;dl&gt;</code>).</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html-q7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#html-a7">What are void (self-closing) elements in HTML5? Give examples.</button>
+                </h2>
+                <div id="html-a7" class="accordion-collapse collapse" data-bs-parent="#htmlAccordion">
+                    <div class="accordion-body">Void elements cannot have any child content. Examples include <code>&lt;br&gt;</code>, <code>&lt;hr&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;input&gt;</code>, and <code>&lt;link&gt;</code>.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html-q8">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#html-a8">What is lazy loading, and how is it supported in HTML5?</button>
+                </h2>
+                <div id="html-a8" class="accordion-collapse collapse" data-bs-parent="#htmlAccordion">
+                    <div class="accordion-body">Lazy loading defers the loading of non-critical resources (like images) until they are needed. HTML5 supports it natively with the <code>loading="lazy"</code> attribute on <code>&lt;img&gt;</code> and <code>&lt;iframe&gt;</code> tags.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html-q9">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#html-a9">How does client-side validation work in HTML5?</button>
+                </h2>
+                <div id="html-a9" class="accordion-collapse collapse" data-bs-parent="#htmlAccordion">
+                    <div class="accordion-body">HTML5 provides built-in form validation using attributes like <code>required</code>, <code>type="email"</code>, <code>pattern</code>, <code>minlength</code>, and <code>maxlength</code>, which browsers can check without JavaScript.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html-q10">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#html-a10">What is the difference between a block-level element and an inline element?</button>
+                </h2>
+                <div id="html-a10" class="accordion-collapse collapse" data-bs-parent="#htmlAccordion">
+                    <div class="accordion-body">Block-level elements (e.g., <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>) start on a new line and take up the full width available. Inline elements (e.g., <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>) do not start on a new line and only take up as much width as necessary.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html-q11">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#html-a11">What happens if you use &lt;a&gt; without an href attribute?</button>
+                </h2>
+                <div id="html-a11" class="accordion-collapse collapse" data-bs-parent="#htmlAccordion">
+                    <div class="accordion-body">It becomes a placeholder link. It will render as text and won't be focusable or clickable. It's not a hyperlink.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html-q12">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#html-a12">Make a text link that scrolls to a specific section in the same page using an ID.</button>
+                </h2>
+                <div id="html-a12" class="accordion-collapse collapse" data-bs-parent="#htmlAccordion">
+                    <div class="accordion-body"><pre><code>&lt;a href="#section1"&gt;Go to Section 1&lt;/a&gt;
+...
+&lt;div id="section1"&gt;This is the section.&lt;/div&gt;</code></pre></div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html-q13">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#html-a13">How can you make part of an image clickable using &lt;a&gt;?</button>
+                </h2>
+                <div id="html-a13" class="accordion-collapse collapse" data-bs-parent="#htmlAccordion">
+                    <div class="accordion-body">Using an image map with <code>&lt;map&gt;</code> and <code>&lt;area&gt;</code> tags. The <code>usemap</code> attribute on the <code>&lt;img&gt;</code> tag links it to the map.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html-q14">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#html-a14">What is the difference between em and strong tags?</button>
+                </h2>
+                <div id="html-a14" class="accordion-collapse collapse" data-bs-parent="#htmlAccordion">
+                    <div class="accordion-body"><code>&lt;em&gt;</code> (emphasis) is used to stress a word, typically rendered in italics. <code>&lt;strong&gt;</code> indicates that the content is important, typically rendered in bold.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html-q15">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#html-a15">Create a form to collect user registration data: Name, Email, Password, Gender, Hobbies, and Submit button.</button>
+                </h2>
+                <div id="html-a15" class="accordion-collapse collapse" data-bs-parent="#htmlAccordion">
+                    <div class="accordion-body"><pre><code>&lt;form&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="text" id="name" name="name"&gt;&lt;br&gt;
+  &lt;label for="email"&gt;Email:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;
+  &lt;label for="password"&gt;Password:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="password" id="password" name="password"&gt;&lt;br&gt;
+  &lt;p&gt;Gender:&lt;/p&gt;
+  &lt;input type="radio" id="male" name="gender" value="male"&gt;
+  &lt;label for="male"&gt;Male&lt;/label&gt;&lt;br&gt;
+  &lt;input type="radio" id="female" name="gender" value="female"&gt;
+  &lt;label for="female"&gt;Female&lt;/label&gt;&lt;br&gt;
+  &lt;p&gt;Hobbies:&lt;/p&gt;
+  &lt;input type="checkbox" id="hobby1" name="hobby1" value="Reading"&gt;
+  &lt;label for="hobby1"&gt;Reading&lt;/label&gt;&lt;br&gt;
+  &lt;input type="checkbox" id="hobby2" name="hobby2" value="Gaming"&gt;
+  &lt;label for="hobby2"&gt;Gaming&lt;/label&gt;&lt;br&gt;
+  &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;</code></pre></div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html-q16">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#html-a16">Create a form that validates a phone number using the pattern attribute.</button>
+                </h2>
+                <div id="html-a16" class="accordion-collapse collapse" data-bs-parent="#htmlAccordion">
+                    <div class="accordion-body"><pre><code>&lt;form&gt;
+  &lt;label for="phone"&gt;Phone (format: 123-456-7890):&lt;/label&gt;
+  &lt;input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required&gt;
+  &lt;input type="submit"&gt;
+&lt;/form&gt;</code></pre></div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html-q17">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#html-a17">Design a timetable for a weekly class schedule using HTML table tags.</button>
+                </h2>
+                <div id="html-a17" class="accordion-collapse collapse" data-bs-parent="#htmlAccordion">
+                    <div class="accordion-body">Use <code>&lt;table&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code> to structure the timetable with days as columns and times as rows.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html-q18">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#html-a18">How can you make a table responsive on smaller screens?</button>
+                </h2>
+                <div id="html-a18" class="accordion-collapse collapse" data-bs-parent="#htmlAccordion">
+                    <div class="accordion-body">Wrap the table in a container with <code>overflow-x: auto;</code> to allow horizontal scrolling, or refactor the table structure with CSS for smaller screens (e.g., display as blocks).</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="html-q19">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#html-a19">Create a table and explain how to achieve colspan.</button>
+                </h2>
+                <div id="html-a19" class="accordion-collapse collapse" data-bs-parent="#htmlAccordion">
+                    <div class="accordion-body">The <code>colspan</code> attribute on a <code>&lt;td&gt;</code> or <code>&lt;th&gt;</code> element specifies how many columns a cell should span. Example: <code>&lt;td colspan="2"&gt;This cell spans two columns.&lt;/td&gt;</code>.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CSS Section -->
+        <h2 class="category-title">CSS</h2>
+        <div class="accordion" id="cssAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a1">What is the difference between inline, internal, and external CSS?</button>
+                </h2>
+                <div id="css-a1" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body"><strong>Inline:</strong> Uses the <code>style</code> attribute inside an HTML element. <br><strong>Internal:</strong> Placed inside a <code>&lt;style&gt;</code> tag in the document's <code>&lt;head&gt;</code>. <br><strong>External:</strong> Written in a separate <code>.css</code> file, linked via a <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code>.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a2">What is the difference between class selector (.class) and ID selector (#id)?</button>
+                </h2>
+                <div id="css-a2" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body">An <strong>ID selector</strong> is unique within a page and is used to style a single, specific element. A <strong>class selector</strong> can be applied to multiple elements to share the same styling.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a3">What are pseudo-classes? Give an example of :hover to change link color on mouseover.</button>
+                </h2>
+                <div id="css-a3" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body">A pseudo-class is used to define a special state of an element. Example: <code>a:hover { color: red; }</code> changes the link color to red when the mouse is over it.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a4">What is the box model in CSS? Explain its components.</button>
+                </h2>
+                <div id="css-a4" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body">The box model describes the rectangular boxes generated for elements. It consists of: Content, Padding, Border, and Margin.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a5">What does display: inline, block, and none do?</button>
+                </h2>
+                <div id="css-a5" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body"><code>inline</code>: Element flows with text, no new line. <code>block</code>: Element starts on a new line and takes full width. <code>none</code>: Element is completely removed from the page.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a6">What is the difference between position: relative, absolute, fixed, and sticky?</button>
+                </h2>
+                <div id="css-a6" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body"><code>relative</code>: Positioned relative to its normal position. <code>absolute</code>: Positioned relative to its nearest positioned ancestor. <code>fixed</code>: Positioned relative to the viewport. <code>sticky</code>: A mix of relative and fixed; it scrolls with the page until it hits a specified offset.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a7">What is z-index in CSS?</button>
+                </h2>
+                <div id="css-a7" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body"><code>z-index</code> specifies the stack order of an element. An element with a greater stack order is always in front of an element with a lower stack order. It only works on positioned elements.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q8">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a8">What is Flexbox? Why is it better than float?</button>
+                </h2>
+                <div id="css-a8" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body">Flexbox is a one-dimensional layout model for arranging items in rows or columns. It's better than floats because it provides more powerful alignment and distribution capabilities without the side effects of floats (like needing clearfixes).</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q9">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a9">Difference between flex row and column.</button>
+                </h2>
+                <div id="css-a9" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body"><code>flex-direction: row</code> (default) aligns items horizontally. <code>flex-direction: column</code> aligns items vertically.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q10-new1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a10-new1">Write CSS to make two `div`s appear side-by-side using float or flex.</button>
+                </h2>
+                <div id="css-a10-new1" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body"><pre><code>/* Using Flexbox (recommended) */
+.container {
+  display: flex;
+}
+.container div {
+  flex: 1; /* Each div takes equal space */
+}
+
+/* Using Float (older method) */
+.div1 {
+  float: left;
+  width: 50%;
+}
+.div2 {
+  float: left;
+  width: 50%;
+}</code></pre></div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q10-new2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a10-new2">Write HTML and CSS to place 3 boxes in a row using Flexbox.</button>
+                </h2>
+                <div id="css-a10-new2" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body"><pre><code>&lt;!-- HTML --&gt;
+&lt;div class="container"&gt;
+  &lt;div class="box"&gt;1&lt;/div&gt;
+  &lt;div class="box"&gt;2&lt;/div&gt;
+  &lt;div class="box"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- CSS --&gt;
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}</code></pre></div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q10">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a10">How do you align items to the centre both horizontally and vertically using Flexbox?</button>
+                </h2>
+                <div id="css-a10" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body"><pre><code>.container {
+  display: flex;
+  justify-content: center; /* Horizontal alignment */
+  align-items: center;     /* Vertical alignment */
+}</code></pre></div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q10-new3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a10-new3">Justify content allows you to do what?</button>
+                </h2>
+                <div id="css-a10-new3" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body">The <code>justify-content</code> property aligns flex items along the main axis of the flex container. It controls how space is distributed between and around the items. Common values include <code>flex-start</code>, <code>center</code>, <code>space-between</code>, and <code>space-around</code>.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q11">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a11">Difference between display none and visibility hidden.</button>
+                </h2>
+                <div id="css-a11" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body"><code>display: none</code> removes the element from the document flow. <code>visibility: hidden</code> hides the element, but it still occupies space in the layout.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q12">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a12">What is CSS Grid? How is it different from Flexbox?</button>
+                </h2>
+                <div id="css-a12" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body">CSS Grid is a two-dimensional layout system, allowing control over both columns and rows. Flexbox is one-dimensional (either a row or a column). Grid is for overall page layout, while Flexbox is for aligning items within a container.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q12-new1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a12-new1">How do you define a grid container in CSS?</button>
+                </h2>
+                <div id="css-a12-new1" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body">You define a grid container by setting the <code>display</code> property of an element to <code>grid</code> or <code>inline-grid</code>. For example: <code>.container { display: grid; }</code></div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q13">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a13">Write a rule to create a grid with 3 equal columns.</button>
+                </h2>
+                <div id="css-a13" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body"><pre><code>.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* or repeat(3, 1fr) */
+}</code></pre></div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q13-new1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a13-new1">What is the use of grid-template-columns and grid-template-rows?</button>
+                </h2>
+                <div id="css-a13-new1" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body"><code>grid-template-columns</code> defines the number and size of columns in a grid layout. <code>grid-template-rows</code> defines the number and size of rows.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q13-new2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a13-new2">What is grid-area and how is it used with grid-template-areas?</button>
+                </h2>
+                <div id="css-a13-new2" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body"><code>grid-template-areas</code> on the container defines a visual layout using named areas. The <code>grid-area</code> property on a child item assigns it to one of those named areas. This allows for a more descriptive and visual way to structure a grid layout.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q13-new3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a13-new3">What’s the difference between gap, row-gap, and column-gap?</button>
+                </h2>
+                <div id="css-a13-new3" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body"><code>gap</code> is a shorthand property for setting the space between grid or flex items. <code>row-gap</code> sets the space between rows, and <code>column-gap</code> sets the space between columns. <code>gap: 20px 10px;</code> is equivalent to <code>row-gap: 20px; column-gap: 10px;</code>.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q13-new4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a13-new4">How do justify-content and align-items work in CSS Grid?</button>
+                </h2>
+                <div id="css-a13-new4" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body">Similar to Flexbox, <code>justify-content</code> aligns the grid along the row (inline) axis, and <code>align-items</code> aligns grid items along the column (block) axis within their grid area.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q13-new5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a13-new5">Build a responsive image gallery using CSS Grid.</button>
+                </h2>
+                <div id="css-a13-new5" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body"><pre><code>.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.gallery img {
+  width: 100%;
+  height: auto;
+}</code></pre></div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q14">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a14">What is a media query in CSS? Why is it used?</button>
+                </h2>
+                <div id="css-a14" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body">A media query is a CSS technique to apply styles based on device characteristics, like viewport width, height, or orientation. It's essential for creating responsive designs that adapt to different screen sizes.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q15">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a15">Write a media query to change background color for screens under 768px.</button>
+                </h2>
+                <div id="css-a15" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body"><pre><code>@media (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}</code></pre></div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q15-new1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a15-new1">What is the purpose of media queries in CSS?</button>
+                </h2>
+                <div id="css-a15-new1" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body">Their primary purpose is to enable responsive web design. They allow developers to create different layouts and apply specific styles for various devices and screen sizes (e.g., mobile, tablet, desktop), ensuring a good user experience across all platforms.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="css-q15-new2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#css-a15-new2">What is the difference between max-width and min-width?</button>
+                </h2>
+                <div id="css-a15-new2" class="accordion-collapse collapse" data-bs-parent="#cssAccordion">
+                    <div class="accordion-body">In media queries, <code>max-width</code> applies styles when the viewport width is *less than or equal to* the specified value (for smaller screens). <code>min-width</code> applies styles when the viewport width is *greater than or equal to* the specified value (for larger screens).</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap Section -->
+        <h2 class="category-title">Bootstrap</h2>
+        <div class="accordion" id="bootstrapAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="bs-q1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs-a1">What is Bootstrap, and what are its primary advantages for web development?</button>
+                </h2>
+                <div id="bs-a1" class="accordion-collapse collapse" data-bs-parent="#bootstrapAccordion">
+                    <div class="accordion-body">Bootstrap is a popular front-end framework for building responsive, mobile-first websites. Its advantages include a responsive grid system, pre-built components (like navbars, modals), and consistent design, which speeds up development.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="bs-q2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs-a2">Explain the Bootstrap grid system and how it facilitates responsive design.</button>
+                </h2>
+                <div id="bs-a2" class="accordion-collapse collapse" data-bs-parent="#bootstrapAccordion">
+                    <div class="accordion-body">It's a mobile-first, 12-column grid system. It uses a series of containers, rows, and columns to create responsive layouts. You use classes like <code>.col-md-6</code> to specify how many columns an element should span at different breakpoints.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="bs-q3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs-a3">What are the differences between container, container-fluid, and container-md in Bootstrap?</button>
+                </h2>
+                <div id="bs-a3" class="accordion-collapse collapse" data-bs-parent="#bootstrapAccordion">
+                    <div class="accordion-body"><code>.container</code> is fixed-width. <code>.container-fluid</code> is full-width. <code>.container-md</code> is full-width until the 'md' breakpoint, then it becomes fixed-width.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="bs-q4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs-a4">How do you create a responsive navigation bar using Bootstrap?</button>
+                </h2>
+                <div id="bs-a4" class="accordion-collapse collapse" data-bs-parent="#bootstrapAccordion">
+                    <div class="accordion-body">Use the <code>.navbar</code>, <code>.navbar-expand-lg</code>, and related classes. The navbar will be collapsible on smaller screens and horizontal on larger screens.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="bs-q5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs-a5">What are Bootstrap breakpoints, and how do they work in responsive design?</button>
+                </h2>
+                <div id="bs-a5" class="accordion-collapse collapse" data-bs-parent="#bootstrapAccordion">
+                    <div class="accordion-body">Breakpoints are customizable widths that determine how your responsive layout behaves across different devices or viewport sizes (e.g., sm, md, lg, xl, xxl).</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="bs-q6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs-a6">Explain the purpose of Bootstrap’s utility classes and provide examples.</button>
+                </h2>
+                <div id="bs-a6" class="accordion-collapse collapse" data-bs-parent="#bootstrapAccordion">
+                    <div class="accordion-body">Utility classes are single-purpose classes that apply a specific style, like margin (<code>.m-1</code>), padding (<code>.p-2</code>), color (<code>.text-danger</code>), or flex properties (<code>.d-flex</code>), allowing for rapid styling without writing custom CSS.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="bs-q6-new1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs-a6-new1">How can you customize Bootstrap’s default styles using CSS or Sass?</button>
+                </h2>
+                <div id="bs-a6-new1" class="accordion-collapse collapse" data-bs-parent="#bootstrapAccordion">
+                    <div class="accordion-body">You can override styles by linking your own stylesheet after Bootstrap's CSS. For more advanced customization, you can use Sass to modify Bootstrap's Sass variables and recompile the CSS file.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="bs-q6-new2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs-a6-new2">What is the role of the Bootstrap col class, and how do you use it to create layouts?</button>
+                </h2>
+                <div id="bs-a6-new2" class="accordion-collapse collapse" data-bs-parent="#bootstrapAccordion">
+                    <div class="accordion-body">The <code>col</code> classes are the fundamental building blocks of the Bootstrap grid. You place them inside a <code>.row</code> to create columns. For example, <code>.col-md-4</code> creates a column that spans 4 of the 12 available columns on medium screens and up.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="bs-q7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs-a7">How do you implement a modal dialog in Bootstrap? Provide a code example.</button>
+                </h2>
+                <div id="bs-a7" class="accordion-collapse collapse" data-bs-parent="#bootstrapAccordion">
+                    <div class="accordion-body">Use the modal component structure with classes like <code>.modal</code>, <code>.modal-dialog</code>, <code>.modal-content</code>, etc. Trigger it with a button using <code>data-bs-toggle="modal"</code> and <code>data-bs-target="#myModal"</code>.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="bs-q7-new1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs-a7-new1">What are Bootstrap components, and how do they differ from utility classes?</button>
+                </h2>
+                <div id="bs-a7-new1" class="accordion-collapse collapse" data-bs-parent="#bootstrapAccordion">
+                    <div class="accordion-body">Components are complex, pre-built UI elements like Modals, Navbars, and Cards. They consist of structured HTML and CSS. Utility classes are single-purpose helper classes (e.g., <code>.p-3</code>, <code>.text-center</code>) used to apply a single style rule directly.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="bs-q7-new2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs-a7-new2">Explain how to use Bootstrap’s card component to display content.</button>
+                </h2>
+                <div id="bs-a7-new2" class="accordion-collapse collapse" data-bs-parent="#bootstrapAccordion">
+                    <div class="accordion-body">A card is a flexible content container. You use the <code>.card</code> class on a div, and inside it, you can have optional headers (<code>.card-header</code>), bodies (<code>.card-body</code>), footers (<code>.card-footer</code>), and images (<code>.card-img-top</code>).</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="bs-q7-new3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs-a7-new3">How do you create a responsive table using Bootstrap?</button>
+                </h2>
+                <div id="bs-a7-new3" class="accordion-collapse collapse" data-bs-parent="#bootstrapAccordion">
+                    <div class="accordion-body">Add the <code>.table-responsive</code> class to a wrapper div around a standard <code>&lt;table&gt;</code>. This will make the table scroll horizontally on small devices, preventing it from breaking the page layout.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="bs-q7-new4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs-a7-new4">What is the purpose of Bootstrap’s form controls, and how do you style a form?</button>
+                </h2>
+                <div id="bs-a7-new4" class="accordion-collapse collapse" data-bs-parent="#bootstrapAccordion">
+                    <div class="accordion-body">Bootstrap's form controls (like <code>.form-control</code> for inputs, <code>.form-select</code> for selects) standardize the appearance of form elements across browsers. You structure forms using classes like <code>.mb-3</code> for spacing and <code>.form-label</code> for labels.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="bs-q7-new5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs-a7-new5">How can you integrate Bootstrap’s JavaScript plugins, such as tooltips or popovers?</button>
+                </h2>
+                <div id="bs-a7-new5" class="accordion-collapse collapse" data-bs-parent="#bootstrapAccordion">
+                    <div class="accordion-body">First, ensure you have included Bootstrap's JS bundle. Then, add data attributes (e.g., <code>data-bs-toggle="tooltip"</code>) to your HTML elements. Finally, you must initialize them in your own JavaScript file, for example: <code>var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))</code>.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="bs-q7-new6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#bs-a7-new6">Write a Bootstrap layout for a hero section with a centered heading, subheading, and buttons.</button>
+                </h2>
+                <div id="bs-a7-new6" class="accordion-collapse collapse" data-bs-parent="#bootstrapAccordion">
+                    <div class="accordion-body"><pre><code>&lt;div class="container text-center"&gt;
+  &lt;div class="row justify-content-center"&gt;
+    &lt;div class="col-lg-8"&gt;
+      &lt;h1 class="display-4"&gt;Hero Heading&lt;/h1&gt;
+      &lt;p class="lead"&gt;This is a simple hero unit.&lt;/p&gt;
+      &lt;a class="btn btn-primary btn-lg" href="#"&gt;Learn more&lt;/a&gt;
+      &lt;a class="btn btn-secondary btn-lg" href="#"&gt;Contact us&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript Fundamentals Section -->
+        <h2 class="category-title">JavaScript Fundamentals</h2>
+        <div class="accordion" id="jsAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="js-q0-new1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#js-a0-new1">What is JavaScript, and how does it differ from other programming languages like Python or Java?</button>
+                </h2>
+                <div id="js-a0-new1" class="accordion-collapse collapse" data-bs-parent="#jsAccordion">
+                    <div class="accordion-body">JavaScript is a high-level, single-threaded, non-blocking, asynchronous, interpreted language primarily used for web development. It differs from Java/Python as it's mainly run in browsers (though Node.js allows server-side execution), is dynamically typed, and has a unique event loop model for handling concurrency.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="js-q1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#js-a1">Explain the difference between var, let, and const.</button>
+                </h2>
+                <div id="js-a1" class="accordion-collapse collapse" data-bs-parent="#jsAccordion">
+                    <div class="accordion-body"><code>var</code> is function-scoped and can be re-declared and updated. <code>let</code> is block-scoped, can be updated but not re-declared. <code>const</code> is block-scoped and cannot be re-declared or updated (for primitive values).</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="js-q2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#js-a2">What is the event loop in JavaScript, and how does it handle asynchronous operations?</button>
+                </h2>
+                <div id="js-a2" class="accordion-collapse collapse" data-bs-parent="#jsAccordion">
+                    <div class="accordion-body">The event loop is a mechanism that allows JavaScript, a single-threaded language, to perform non-blocking asynchronous operations. It continuously checks the message queue for tasks and executes them when the call stack is empty.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="js-q2-new1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#js-a2-new1">How do you declare and use functions in JavaScript? Explain function expressions vs. function declarations.</button>
+                </h2>
+                <div id="js-a2-new1" class="accordion-collapse collapse" data-bs-parent="#jsAccordion">
+                    <div class="accordion-body"><strong>Declaration:</strong> <code>function myFunction() { ... }</code>. These are hoisted. <br><strong>Expression:</strong> <code>const myFunction = function() { ... };</code>. These are not hoisted. You call both using <code>myFunction()</code>.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="js-q3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#js-a3">What are closures in JavaScript, and why are they useful? Provide an example.</button>
+                </h2>
+                <div id="js-a3" class="accordion-collapse collapse" data-bs-parent="#jsAccordion">
+                    <div class="accordion-body">A closure is a function that has access to its outer function's scope, even after the outer function has returned. It "remembers" the environment in which it was created. They are useful for creating private variables and factory functions.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="js-q3-new1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#js-a3-new1">Explain the concept of hoisting in JavaScript with an example.</button>
+                </h2>
+                <div id="js-a3-new1" class="accordion-collapse collapse" data-bs-parent="#jsAccordion">
+                    <div class="accordion-body">Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope. Function declarations are fully hoisted, while variables declared with <code>var</code> are hoisted but initialized with <code>undefined</code>. <code>let</code> and <code>const</code> are hoisted but not initialized, creating a "temporal dead zone".</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="js-q4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#js-a4">What is the difference between == and === operators?</button>
+                </h2>
+                <div id="js-a4" class="accordion-collapse collapse" data-bs-parent="#jsAccordion">
+                    <div class="accordion-body"><code>==</code> (loose equality) compares two values for equality after performing type conversion. <code>===</code> (strict equality) compares both value and type, without type conversion.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="js-q5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#js-a5">How do you manipulate the DOM using JavaScript? Provide an example of adding an element.</button>
+                </h2>
+                <div id="js-a5" class="accordion-collapse collapse" data-bs-parent="#jsAccordion">
+                    <div class="accordion-body">You can use methods like <code>document.getElementById()</code>, <code>document.querySelector()</code> to select elements, and then use properties like <code>.innerHTML</code> or methods like <code>.createElement()</code> and <code>.appendChild()</code> to change them.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="js-q6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#js-a6">What are JavaScript promises, and how do they work for asynchronous programming?</button>
+                </h2>
+                <div id="js-a6" class="accordion-collapse collapse" data-bs-parent="#jsAccordion">
+                    <div class="accordion-body">A Promise is an object representing the eventual completion (or failure) of an asynchronous operation. It can be in one of three states: pending, fulfilled, or rejected.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="js-q6-new1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#js-a6-new1">Explain the difference between synchronous and asynchronous JavaScript code.</button>
+                </h2>
+                <div id="js-a6-new1" class="accordion-collapse collapse" data-bs-parent="#jsAccordion">
+                    <div class="accordion-body"><strong>Synchronous</strong> code is "blocking" - each statement is executed one after the other. <strong>Asynchronous</strong> code is "non-blocking" - it allows the program to continue running while waiting for a long task (like a network request) to complete.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="js-q6-new2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#js-a6-new2">How do you handle errors in JavaScript using try-catch blocks?</button>
+                </h2>
+                <div id="js-a6-new2" class="accordion-collapse collapse" data-bs-parent="#jsAccordion">
+                    <div class="accordion-body">The <code>try...catch</code> statement marks a block of code to be tried (<code>try</code>), and specifies a response should an exception be thrown (<code>catch</code>). It's used for handling runtime errors in synchronous code.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="js-q6-new3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#js-a6-new3">What is the purpose of the this keyword in JavaScript, and how does its value change?</button>
+                </h2>
+                <div id="js-a6-new3" class="accordion-collapse collapse" data-bs-parent="#jsAccordion">
+                    <div class="accordion-body">The <code>this</code> keyword refers to the object it belongs to. Its value is determined by how a function is called. In a method, it refers to the owner object. In a regular function, it refers to the global object (or <code>undefined</code> in strict mode). Arrow functions lexically bind <code>this</code> from their parent scope.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="js-q6-new4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#js-a6-new4">Write a JavaScript function to validate an email address using a regular expression.</button>
+                </h2>
+                <div id="js-a6-new4" class="accordion-collapse collapse" data-bs-parent="#jsAccordion">
+                    <div class="accordion-body"><pre><code>function validateEmail(email) {
+  const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  return re.test(String(email).toLowerCase());
+}</code></pre></div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="js-q7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#js-a7">How do you use event listeners in JavaScript? Provide an example of a click event.</button>
+                </h2>
+                <div id="js-a7" class="accordion-collapse collapse" data-bs-parent="#jsAccordion">
+                    <div class="accordion-body">Use the <code>.addEventListener()</code> method on a DOM element. Example: <code>element.addEventListener('click', function() { ... });</code></div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="js-q8">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#js-a8">Explain how to use the fetch API to make an HTTP request in JavaScript.</button>
+                </h2>
+                <div id="js-a8" class="accordion-collapse collapse" data-bs-parent="#jsAccordion">
+                    <div class="accordion-body">The <code>fetch()</code> method starts the process of fetching a resource from the network, returning a promise which is fulfilled once the response is available. Example: <code>fetch('url').then(response => response.json()).then(data => console.log(data));</code></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Advanced JavaScript Section -->
+        <h2 class="category-title">Advanced JavaScript Concepts</h2>
+        <div class="accordion" id="advJsAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="advjs-q0-new1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advjs-a0-new1">What is the difference between prototypal inheritance and classical inheritance in JavaScript?</button>
+                </h2>
+                <div id="advjs-a0-new1" class="accordion-collapse collapse" data-bs-parent="#advJsAccordion">
+                    <div class="accordion-body">JavaScript uses prototypal inheritance, where objects inherit directly from other objects. Classical inheritance (used in languages like Java or C++) involves creating classes which act as blueprints for objects. ES6 classes in JS are syntactic sugar over prototypal inheritance.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="advjs-q0-new2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advjs-a0-new2">Explain the concept of the JavaScript module system (ES6 modules vs. CommonJS).</button>
+                </h2>
+                <div id="advjs-a0-new2" class="accordion-collapse collapse" data-bs-parent="#advJsAccordion">
+                    <div class="accordion-body"><strong>ES6 Modules:</strong> The standard for browsers, uses <code>import</code> and <code>export</code> syntax. It's asynchronous. <br><strong>CommonJS:</strong> The standard for Node.js, uses <code>require()</code> and <code>module.exports</code>. It's synchronous.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="advjs-q1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advjs-a1">What are arrow functions in JavaScript, and how do they differ from regular functions?</button>
+                </h2>
+                <div id="advjs-a1" class="accordion-collapse collapse" data-bs-parent="#advJsAccordion">
+                    <div class="accordion-body">Arrow functions (<code>=></code>) are a concise syntax for writing function expressions. They do not have their own <code>this</code>, <code>arguments</code>, or <code>super</code>, and they inherit <code>this</code> from the parent scope.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="advjs-q2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advjs-a2">How does the async/await syntax work in JavaScript, and how does it improve promise handling?</button>
+                </h2>
+                <div id="advjs-a2" class="accordion-collapse collapse" data-bs-parent="#advJsAccordion">
+                    <div class="accordion-body"><code>async/await</code> is syntactic sugar over Promises, making asynchronous code look and behave more like synchronous code. An <code>async</code> function returns a promise, and <code>await</code> pauses the function execution until a promise is settled.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="advjs-q3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advjs-a3">What is the purpose of the spread operator (...)? Provide examples.</button>
+                </h2>
+                <div id="advjs-a3" class="accordion-collapse collapse" data-bs-parent="#advJsAccordion">
+                    <div class="accordion-body">The spread operator allows an iterable (like an array or string) to be expanded in places where zero or more arguments or elements are expected. It's useful for copying arrays, merging objects, and passing arguments to functions.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="advjs-q4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advjs-a4">Explain the concept of destructuring in JavaScript with arrays and objects.</button>
+                </h2>
+                <div id="advjs-a4" class="accordion-collapse collapse" data-bs-parent="#advJsAccordion">
+                    <div class="accordion-body">Destructuring is a syntax that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="advjs-q4-new1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advjs-a4-new1">What are JavaScript generators, and how are they used? Provide an example.</button>
+                </h2>
+                <div id="advjs-a4-new1" class="accordion-collapse collapse" data-bs-parent="#advJsAccordion">
+                    <div class="accordion-body">Generator functions (<code>function*</code>) can be paused and resumed, allowing them to produce a sequence of values over time. They use the <code>yield</code> keyword to return a value and pause execution.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="advjs-q4-new2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advjs-a4-new2">How does JavaScript handle memory management and garbage collection?</button>
+                </h2>
+                <div id="advjs-a4-new2" class="accordion-collapse collapse" data-bs-parent="#advJsAccordion">
+                    <div class="accordion-body">JavaScript automatically allocates memory when objects are created and frees it when they are not used anymore (garbage collection). The garbage collector periodically checks which objects are no longer reachable from the root objects and reclaims their memory.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="advjs-q5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advjs-a5">What is a higher-order function in JavaScript? Provide an example using map or filter.</button>
+                </h2>
+                <div id="advjs-a5" class="accordion-collapse collapse" data-bs-parent="#advJsAccordion">
+                    <div class="accordion-body">A higher-order function is a function that either takes another function as an argument, returns a function, or both. Examples include <code>map()</code>, <code>filter()</code>, and <code>reduce()</code>.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="advjs-q6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advjs-a6">Explain the difference between call, apply, and bind methods in JavaScript.</button>
+                </h2>
+                <div id="advjs-a6" class="accordion-collapse collapse" data-bs-parent="#advJsAccordion">
+                    <div class="accordion-body">All three methods are used to set the <code>this</code> value for a function. <code>call()</code> and <code>apply()</code> invoke the function immediately, while <code>bind()</code> returns a new function with <code>this</code> bound to a specific value.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="advjs-q7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advjs-a7">What is event delegation in JavaScript, and why is it useful for performance?</button>
+                </h2>
+                <div id="advjs-a7" class="accordion-collapse collapse" data-bs-parent="#advJsAccordion">
+                    <div class="accordion-body">Event delegation is a technique involving adding a single event listener to a parent element to manage events for all of its children. It's more efficient than adding listeners to each child, especially for dynamically added elements.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="advjs-q7-new1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advjs-a7-new1">How do you implement debouncing and throttling in JavaScript? Provide an example.</button>
+                </h2>
+                <div id="advjs-a7-new1" class="accordion-collapse collapse" data-bs-parent="#advJsAccordion">
+                    <div class="accordion-body"><strong>Debouncing</strong> groups a burst of events into one. (e.g., wait until user stops typing). <strong>Throttling</strong> ensures a function is called at most once per specified time period (e.g., on scroll events). Both are implemented using closures and timers like <code>setTimeout</code>.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="advjs-q7-new2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advjs-a7-new2">What are JavaScript symbols, and how are they used to create private properties?</button>
+                </h2>
+                <div id="advjs-a7-new2" class="accordion-collapse collapse" data-bs-parent="#advJsAccordion">
+                    <div class="accordion-body">A Symbol is a unique and immutable primitive value. They can be used as object property keys. Since a Symbol is unique, a property key created with it cannot be accessed from outside the module where it was created, effectively creating a "private" property.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="advjs-q7-new3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advjs-a7-new3">Explain the concept of currying in JavaScript with a practical example.</button>
+                </h2>
+                <div id="advjs-a7-new3" class="accordion-collapse collapse" data-bs-parent="#advJsAccordion">
+                    <div class="accordion-body">Currying is the process of transforming a function that takes multiple arguments into a sequence of functions that each take a single argument. For example, a function <code>add(a, b)</code> becomes <code>add(a)(b)</code>.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="advjs-q7-new4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#advjs-a7-new4">Write a JavaScript function to implement a simple publish-subscribe pattern.</button>
+                </h2>
+                <div id="advjs-a7-new4" class="accordion-collapse collapse" data-bs-parent="#advJsAccordion">
+                    <div class="accordion-body">The pub/sub pattern involves an object that maintains a list of subscribers (callbacks) and notifies them when an event occurs. It has methods like <code>subscribe</code>, <code>unsubscribe</code>, and <code>publish</code>.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Node.js Section -->
+        <h2 class="category-title">Node.js & Backend JavaScript</h2>
+        <div class="accordion" id="nodeAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="node-q1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#node-a1">What is Node.js, and how does it differ from traditional server-side technologies?</button>
+                </h2>
+                <div id="node-a1" class="accordion-collapse collapse" data-bs-parent="#nodeAccordion">
+                    <div class="accordion-body">Node.js is a JavaScript runtime built on Chrome's V8 engine that allows developers to run JavaScript on the server-side. It uses an event-driven, non-blocking I/O model, making it efficient for building scalable network applications, unlike traditional thread-based technologies.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="node-q1-new1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#node-a1-new1">Explain the role of the Node.js event loop in handling asynchronous operations.</button>
+                </h2>
+                <div id="node-a1-new1" class="accordion-collapse collapse" data-bs-parent="#nodeAccordion">
+                    <div class="accordion-body">The event loop allows Node.js to perform non-blocking I/O operations. When an async operation is initiated, its callback is registered, and Node.js continues executing other code. When the operation completes, the event loop picks up the callback from the event queue and pushes it to the call stack for execution.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="node-q2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#node-a2">What is the purpose of the package.json file?</button>
+                </h2>
+                <div id="node-a2" class="accordion-collapse collapse" data-bs-parent="#nodeAccordion">
+                    <div class="accordion-body"><code>package.json</code> holds metadata about a Node.js project, such as its name, version, and scripts. It also lists the project's dependencies, which allows npm to install them correctly.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="node-q3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#node-a3">How do you create a simple HTTP server using Node.js? Provide a code example.</button>
+                </h2>
+                <div id="node-a3" class="accordion-collapse collapse" data-bs-parent="#nodeAccordion">
+                    <div class="accordion-body">Using the built-in <code>http</code> module. You call <code>http.createServer()</code> with a callback function that handles requests and responses, and then call <code>.listen()</code> on the server instance.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="node-q4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#node-a4">What is npm, and how do you use it to manage dependencies in a Node.js project?</button>
+                </h2>
+                <div id="node-a4" class="accordion-collapse collapse" data-bs-parent="#nodeAccordion">
+                    <div class="accordion-body">npm (Node Package Manager) is the default package manager for Node.js. You use commands like <code>npm install &lt;package&gt;</code> to add dependencies (which are recorded in <code>package.json</code>) and <code>npm install</code> to install all dependencies for a project.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="node-q4-new1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#node-a4-new1">Explain the difference between synchronous and asynchronous file operations in Node.js.</button>
+                </h2>
+                <div id="node-a4-new1" class="accordion-collapse collapse" data-bs-parent="#nodeAccordion">
+                    <div class="accordion-body">Synchronous methods (e.g., <code>fs.readFileSync</code>) block the event loop until the operation is complete. Asynchronous methods (e.g., <code>fs.readFile</code>) use a callback or promise and do not block the event loop, which is preferred for server performance.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="node-q4-new2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#node-a4-new2">How do you handle environment variables in a Node.js application?</button>
+                </h2>
+                <div id="node-a4-new2" class="accordion-collapse collapse" data-bs-parent="#nodeAccordion">
+                    <div class="accordion-body">Environment variables are accessed via the <code>process.env</code> object. It's common practice to use a <code>.env</code> file and a library like <code>dotenv</code> to load these variables into <code>process.env</code> during development.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="node-q5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#node-a5">What is Express.js, and how does it simplify web development in Node.js?</button>
+                </h2>
+                <div id="node-a5" class="accordion-collapse collapse" data-bs-parent="#nodeAccordion">
+                    <div class="accordion-body">Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications, such as routing, middleware, and template engines.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="node-q5-new1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#node-a5-new1">Write an Express.js route to handle GET and POST requests for a user resource.</button>
+                </h2>
+                <div id="node-a5-new1" class="accordion-collapse collapse" data-bs-parent="#nodeAccordion">
+                    <div class="accordion-body"><pre><code>const express = require('express');
+const app = express();
+app.use(express.json()); // for parsing application/json
+
+// GET request
+app.get('/users/:id', (req, res) => {
+  // Logic to fetch user by req.params.id
+  res.send(`Fetching user ${req.params.id}`);
+});
+
+// POST request
+app.post('/users', (req, res) => {
+  // Logic to create a new user with req.body
+  res.send('User created');
+});</code></pre></div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="node-q6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#node-a6">How do you implement middleware in Express.js? Provide an example.</button>
+                </h2>
+                <div id="node-a6" class="accordion-collapse collapse" data-bs-parent="#nodeAccordion">
+                    <div class="accordion-body">Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. You use <code>app.use()</code> or provide it as an argument to a route handler.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="node-q7">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#node-a7">Explain the concept of RESTful APIs and how to create one using Node.js and Express.</button>
+                </h2>
+                <div id="node-a7" class="accordion-collapse collapse" data-bs-parent="#nodeAccordion">
+                    <div class="accordion-body">A RESTful API is an architectural style for designing networked applications. It uses standard HTTP methods (GET, POST, PUT, DELETE) to perform CRUD (Create, Read, Update, Delete) operations on resources identified by URLs.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="node-q7-new1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#node-a7-new1">How do you connect a Node.js application to a MongoDB database using Mongoose?</button>
+                </h2>
+                <div id="node-a7-new1" class="accordion-collapse collapse" data-bs-parent="#nodeAccordion">
+                    <div class="accordion-body">You use the <code>mongoose.connect()</code> method, passing it your MongoDB connection string. Mongoose provides a schema-based solution to model your application data, including built-in type casting, validation, and query building.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="node-q7-new2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#node-a7-new2">What is the purpose of the Node.js cluster module, and how does it improve performance?</button>
+                </h2>
+                <div id="node-a7-new2" class="accordion-collapse collapse" data-bs-parent="#nodeAccordion">
+                    <div class="accordion-body">The cluster module allows you to create child processes (workers) that share the same server port. This enables a Node.js application to take advantage of multi-core systems, improving performance and reliability by distributing the load among the worker processes.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="node-q7-new3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#node-a7-new3">How do you handle errors in a Node.js application to ensure robust applications?</button>
+                </h2>
+                <div id="node-a7-new3" class="accordion-collapse collapse" data-bs-parent="#nodeAccordion">
+                    <div class="accordion-body">Error handling strategies include: using <code>try...catch</code> for synchronous code, using <code>.catch()</code> for promises, and creating centralized error-handling middleware in Express to catch errors passed via <code>next(error)</code>.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="node-q7-new4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#node-a7-new4">Write a Node.js script to read a JSON file and serve its contents via an API endpoint.</button>
+                </h2>
+                <div id="node-a7-new4" class="accordion-collapse collapse" data-bs-parent="#nodeAccordion">
+                    <div class="accordion-body"><pre><code>const http = require('http');
+const fs = require('fs');
+
+const server = http.createServer((req, res) => {
+  if (req.url === '/api/data') {
+    fs.readFile('./data.json', 'utf8', (err, data) => {
+      if (err) {
+        res.writeHead(500, {'Content-Type': 'text/plain'});
+        res.end('Internal Server Error');
+        return;
+      }
+      res.writeHead(200, {'Content-Type': 'application/json'});
+      res.end(data);
+    });
+  } else {
+    res.writeHead(404, {'Content-Type': 'text/plain'});
+    res.end('Not Found');
+  }
+});
+
+server.listen(3000, () => console.log('Server running on port 3000'));</code></pre></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
